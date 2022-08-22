@@ -1,0 +1,11 @@
+firstNum = int(input("Enter an integer number: "))
+secondNum = int(input("Enter an integer number: "))
+thirdNum = int(input("Enter an integer number: "))
+
+sumOfNumbers = firstNum + secondNum + thirdNum
+product = firstNum * secondNum * thirdNum
+average = (firstNum + secondNum + thirdNum)/3
+
+print("Sum: " + int(sumOfNumbers))
+print("Product: " + int(product))
+print("Average: " + int(average))
