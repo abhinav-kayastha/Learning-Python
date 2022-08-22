@@ -6,6 +6,6 @@ sumOfNumbers = firstNum + secondNum + thirdNum
 product = firstNum * secondNum * thirdNum
 average = (firstNum + secondNum + thirdNum)/3
 
-print("Sum: " + int(sumOfNumbers))
-print("Product: " + int(product))
-print("Average: " + int(average))
+print("Sum: " + str(sumOfNumbers))
+print("Product: " + str(product))
+print("Average: " + str(average))
