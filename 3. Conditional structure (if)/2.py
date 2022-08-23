@@ -8,4 +8,4 @@ elif cabinClass == "B":
     print("B: windowless cabin above the car deck.")
     print("B: windowless cabin below the car deck.")
 else:
-    print("Enter a valid cabin class.")
+    print("Invalid cabin class.")
