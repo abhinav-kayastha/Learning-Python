@@ -7,4 +7,12 @@ if gender == "F":
     elif hemoglobinValue > 155:
         print("High hemogblin.")
     else:
-        print("Low hemoglobin")
+       print("Low hemoglobin")
+
+if gender == "M":
+    if 134 <= hemoglobinValue >= 167:
+        print("Normal hemoglobin.")
+    elif hemoglobinValue > 167:
+        print("High hemoglobin.")
+    else:
+        print("Low hemoglobin.")
