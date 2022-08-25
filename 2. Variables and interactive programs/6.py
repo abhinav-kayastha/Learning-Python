@@ -1,27 +1,17 @@
-import random
+from random import randint
 
-FirstThreeDigitCode = random.randint(100, 999)
-SecondThreeDigitCode = random.randint(100, 999)
+ThreeDigitCode = ""
 
-while True:
-    if SecondThreeDigitCode != FirstThreeDigitCode:
-        break
-    else:
-        SecondThreeDigitCode = random.randint(100, 999)
+for x in range(3):
+    ThreeDigitCode = ThreeDigitCode + str(randint(0,9))
 
-print(FirstThreeDigitCode)
-print(SecondThreeDigitCode)
+print(ThreeDigitCode)
 
-FirstFourthDigitCode = random.randint(1000, 9999)
-SecondFourthDigitCode = random.randint(1000, 9999)
+FourDigitCode = ""
 
-while True:
-    if SecondFourthDigitCode != FirstFourthDigitCode:
-        break
-    else:
-        SecondFourthDigitCode = random.randint(1000, 9999)
+for y in range(4):
+    FourDigitCode = FourDigitCode + str(randint(1,6))
 
-print(FirstFourthDigitCode)
-print(SecondFourthDigitCode)
+print(FourDigitCode)
 
 
