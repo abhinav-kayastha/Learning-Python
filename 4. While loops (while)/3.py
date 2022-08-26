@@ -1,10 +1,12 @@
+numbers = []
+
 while True:
-    numbers = []
-    UserNumbers = float(input("Enter a number: "))
-    print("Just press enter to quit.")
-    if UserNumbers == "":
+    UserNumberStr = input("Enter a number: ")
+    if UserNumberStr == "":
         break
-    numbers.append(UserNumbers)
+    else:
+        UserNumberFloat = float(UserNumberStr)
+        numbers.append(UserNumberFloat)
 
 print(f"The largest number is {max(numbers)}")
 print(f"The smallest number is {min(numbers)}")
