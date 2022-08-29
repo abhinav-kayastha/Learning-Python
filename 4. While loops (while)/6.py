@@ -1,6 +1,6 @@
 import random
 
-numbersOfPoints = 1000000
+numbersOfPoints = int(input("Enter a large integer number: "))
 pointsInsideCircle = 0
 
 for x in range(numbersOfPoints):
