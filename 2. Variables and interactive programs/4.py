@@ -4,7 +4,7 @@ thirdNum = int(input("Enter an integer number: "))
 
 sumOfNumbers = firstNum + secondNum + thirdNum
 product = firstNum * secondNum * thirdNum
-average = (firstNum + secondNum + thirdNum)/3
+average = (sumOfNumbers)/3
 
 print("Sum: " + str(sumOfNumbers))
 print("Product: " + str(product))
