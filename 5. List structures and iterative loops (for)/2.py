@@ -21,4 +21,4 @@ for x in range(5):
     NumbersList.remove(LargestNumber)
 
 
-print(FiveGreatestNumbers)
+print(FiveGreatestNumbers.sort(reverse=True))
