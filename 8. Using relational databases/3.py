@@ -23,16 +23,16 @@ connection = mysql.connector.connect(
 gps_code_one = input("Enter GPS Code of 1st Airport: ")
 gps_code_two = input("Enter GPS Code of 2nd Airport: ")
 
+coordinates_1 = []
+coordinates_2 = []
 
-def coordinates_1():
-    for x in getAirportCoordinates(gps_code_one)[0]:
-        float(x)
-    return
+for x in getAirportCoordinates(gps_code_one)[0]:
+    coordinates_1.append(float(x))
 
+for x in getAirportCoordinates(gps_code_two)[0]:
+    coordinates_2.append(float(x))
 
-def coordinates_2():
-    for x in getAirportCoordinates(gps_code_two)[0]:
-        float(x)
-    return
+coordinates_1 = tuple(coordinates_1)
+coordinates_2 = tuple(coordinates_2)
 
-#distance = print(f"The distance between {gps_code_one} and {gps_code_two} is x km.")
+print(f"The distance between {gps_code_one} and {gps_code_two} is {distance.distance(coordinates_1, coordinates_2)}.")
