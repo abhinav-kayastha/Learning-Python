@@ -1,3 +1,5 @@
+# NOTE: ICAO code did not exist in my database therefore I had to use GPS code instead.
+
 import mysql.connector
 from geopy import distance
 
