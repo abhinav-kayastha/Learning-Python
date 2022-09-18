@@ -2,8 +2,7 @@ import mysql.connector
 
 
 def getAirportNameAndTown(gps_code):
-    sql = "SELECT name, municipality FROM airport"
-    sql += " WHERE gps_code = " + gps_code + ";"
+    sql = 'SELECT name, municipality FROM airport WHERE gps_code = ' + f'"{gps_code}"' + ";"
     print(sql)
     cursor = connection.cursor()
     cursor.execute(sql)
