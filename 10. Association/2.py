@@ -27,18 +27,16 @@ class Building:
         self.top_floor = top_floor
         self.bottom_floor = bottom_floor
         self.number_of_elevators = []
-        for elevator in range(number_of_elevators):
+        for elevator in range(number_of_elevators + 1):
             ele = Elevator()
             self.number_of_elevators.append(ele)
 
-
-    def run_elevator(self, destination_floor):
+    def run_elevators(self, destination_floor):
         for elevator in self.number_of_elevators:
             elevator.go_to_floor(destination_floor)
+            print("\n")
+        return
 
 
-
-
-
-
-
+building1 = Building(7, 0, 3)
+building1.run_elevators(3)
