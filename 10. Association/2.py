@@ -1,5 +1,5 @@
 class Elevator:
-    def __init__(self, top_floor, bottom_floor=0, current_floor=0):
+    def __init__(self, top_floor=7, bottom_floor=0, current_floor=0):
         self.top_floor = top_floor
         self.bottom_floor = bottom_floor
         self.current_floor = current_floor
@@ -22,6 +22,22 @@ class Elevator:
         return
 
 
-elevator1 = Elevator(7)
-elevator1.go_to_floor(5)
-elevator1.go_to_floor(0)
+class Building:
+    def __init__(self, top_floor, bottom_floor, number_of_elevators):
+        self.top_floor = top_floor
+        self.bottom_floor = bottom_floor
+        self.number_of_elevators = []
+        for elevator in range(number_of_elevators):
+            ele = Elevator()
+            self.number_of_elevators.append(ele)
+
+
+    def run_elevator(self, destination_floor):
+        for elevator in self.number_of_elevators:
+            elevator.go_to_floor(destination_floor)
+
+
+
+
+
+
