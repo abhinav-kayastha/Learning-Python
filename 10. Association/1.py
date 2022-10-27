@@ -25,3 +25,4 @@ class Elevator:
 elevator1 = Elevator(7)
 elevator1.go_to_floor(5)
 elevator1.go_to_floor(0)
+
