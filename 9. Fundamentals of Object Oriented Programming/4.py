@@ -29,10 +29,14 @@ for x in range(1, 11):
     max_speed = randint(100, 200)
     cars.append(Car(registration_number, max_speed))
 
-for car in cars:
-    while car.distance_travelled <= 10000:
+race_over = False
+
+while not race_over:
+    for car in cars:
         car.accelerate(randint(-10, 15))
         car.drive(1)
+        if car.distance_travelled >= 10000:
+            race_over = True
 
 for car in cars:
     print(f"Registration number: {car.registration_number}, Maximum speed: {car.max_speed}, Current speed: {car.current_speed}, Distance travelled: {car.distance_travelled}.")
