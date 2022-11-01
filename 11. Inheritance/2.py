@@ -70,6 +70,6 @@ cars = []
 cars.append(ElectricCar("ABC-15", 180, 52.5))
 cars.append(GasolineCar("ACD-123", 165, 32.3))
 for car in cars:
-    car.accelerate(30)
+    car.accelerate(randint(30, 60))
     car.drive(3)
     print(f"Car: {car.registration_number}\nDistance Travelled: {car.distance_travelled}\n")
