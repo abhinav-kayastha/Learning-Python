@@ -27,23 +27,29 @@ class Building:
         self.top_floor = top_floor
         self.bottom_floor = bottom_floor
         self.number_of_elevators = []
-        for elevator in range(number_of_elevators):
+        for elevator in range(number_of_elevators + 1):
             ele = Elevator()
             self.number_of_elevators.append(ele)
 
-    def run_elevators(self, destination_floor):
-        for elevator in self.number_of_elevators:
-            elevator.go_to_floor(destination_floor)
-            print("\n")
+    def run_elevator(self, chosen_elevator, destination_floor):
+        if chosen_elevator > len(self.number_of_elevators):
+            chosen_elevator = self.number_of_elevators[-1]
+            chosen_elevator.go_to_floor(destination_floor)
+        elif chosen_elevator < len(self.number_of_elevators):
+            chosen_elevator = self.number_of_elevators[0]
+            chosen_elevator.go_to_floor(destination_floor)
+        else:
+            chosen_elevator = self.number_of_elevators[chosen_elevator]
+            chosen_elevator.go_to_floor(destination_floor)
         return
 
     def fire_alarm(self):
         for elevator in self.number_of_elevators:
-            elevator.go_to_floor(0)
             print("\n")
+            elevator.go_to_floor(0)
         return
 
 
 building1 = Building(7, 0, 3)
-building1.run_elevators(3)
+building1.run_elevator(2, 6)
 building1.fire_alarm()
