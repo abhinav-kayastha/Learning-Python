@@ -1,3 +1,5 @@
+# Code only works for cities in the US since the Geocoding API does not work for cities outside the US
+
 import requests
 
 city_name = input("Enter a city name (US Only): ")
